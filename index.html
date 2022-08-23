@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Css task</title>
+    <style type="text/css" media="screen">
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .elephantCol {
+        background-color: #998235;
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        max-width: 500px;
+        height: 359px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mouthCol {
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        background-color: #1A4341;
+        position: relative;
+        z-index: 1;
+    }
+
+    .earStyle {
+        height: 180px;
+        width: 80px;
+        background-color: #1a4341;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .leftEar.earStyle {
+        left: 20px;
+        /* border-left: 20px solid #1A4341; */
+        overflow: hidden;
+    }
+
+    .leftEar.earStyle:after {
+        content: "";
+        position: absolute;
+        background: #0b2429;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        border-radius: 50%;
+        width: 70px;
+    }
+
+
+    .rightEar.earStyle {
+        right: 20px;
+        /* border-right: 20px solid #1A4341; */
+        overflow: hidden;
+    }
+
+    .rightEar.earStyle:after {
+        content: "";
+        position: absolute;
+        background: #0b2429;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        border-radius: 50%;
+        width: 70px;
+    }
+
+    .eyeCol {
+        overflow: hidden;
+        height: 20px;
+        width: 38px;
+        background: #998235;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+
+    .eyeCol.rightEye {
+        right: 56%;
+    }
+
+    .eyeCol.leftEye {
+        left: 56%;
+    }
+
+    .eyeInnerCol {
+        height: 15px;
+        width: 20px;
+        display: block;
+        background: #0B2429;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .teeth {
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
+        position: absolute;
+        bottom: -10px;
+        border: 20px solid #fff;
+        width: 120px;
+        height: 60px;
+        border-bottom: none;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .trunkCol {
+        height: 150px;
+        width: 40px;
+        background: #0b2429;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        position: absolute;
+        bottom: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="elephantCol">
+        <div class="container">
+            <div class="row">
+                <div class="leftEar earStyle"><span class="earPiece"></span></div>
+                <div class="mouthCol">
+                    <div class="eyeCol leftEye"><span class="eyeInnerCol"></span></div>
+                    <div class="eyeCol rightEye"><span class="eyeInnerCol"></span></div>
+                    <div class="teeth"></div>
+                    <div class="trunkCol"></div>
+                </div>
+                <div class="rightEar earStyle"><span class="earPiece"></span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
